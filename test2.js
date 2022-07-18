@@ -1,5 +1,30 @@
-// Testing for every function:
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function encrypt(text, n) {
+  if (!text || n <= 0) return text;
+  while (n--) {
+    let ans = '';
+    for (let i = 1; i < text.length; i += 2) {
+      ans += text[i];
+    }
+    for (let i = 0; i < text.length; i += 2) {
+      ans += text[i];
+    }
+    text = ans;
+  }
+  return text;
+}
 
-console.log(arr.every(num => typeof num === "string"));  // false
-console.log(arr.every(num => typeof num === "number")); // true
+function decrypt(encryptedText, n) {
+  if (!encryptedText || n <= 0) return encryptedText;
+  const ans = new Array(encryptedText.length);
+  while (n--) {
+    let j = 0;
+    for (let i = 1; i < ans.length; i += 2) {
+      ans[i] = encryptedText[j++];
+    }
+    for (let i = 0; i < ans.length; i += 2) {
+      ans[i] = encryptedText[j++];
+    }
+    encryptedText = ans.join('');
+  }
+  return encryptedText;
+}

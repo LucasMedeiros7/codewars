@@ -7,7 +7,7 @@
  the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
  Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.*/
 
-// Solution: 
+// Solution:
 function isPangram(string) {
   let result = [];
   let letters = string.toUpperCase().split("");
@@ -26,5 +26,5 @@ function isPangram(string) {
 // Other Solutions:
 function isPangram(string) {
   let alphabet = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-  return alphabet.every(letter => string.toUpperCase().includes(letter));
+  return alphabet.every((letter) => string.toUpperCase().includes(letter));
 }
