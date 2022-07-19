@@ -15,13 +15,13 @@
 function duplicateEncode(word) {
   word = word.toLowerCase();
   let lettersRepeat = countRepeatLetters(word);
-  let newString = "";
+  let newString = '';
 
   for (let i = 0; i < word.length; i++) {
     if (lettersRepeat.includes(word[i])) {
-      newString += ")";
+      newString += ')';
     } else {
-      newString += "(";
+      newString += '(';
     }
   }
 

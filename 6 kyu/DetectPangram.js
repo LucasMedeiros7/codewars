@@ -10,7 +10,7 @@
 // Solution:
 function isPangram(string) {
   let result = [];
-  let letters = string.toUpperCase().split("");
+  let letters = string.toUpperCase().split('');
 
   for (let i = 0; i < letters.length; i++) {
     if (/[A-Z]/g.test(letters[i])) {
@@ -25,6 +25,6 @@ function isPangram(string) {
 
 // Other Solutions:
 function isPangram(string) {
-  let alphabet = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-  return alphabet.every((letter) => string.toUpperCase().includes(letter));
+  let alphabet = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+  return alphabet.every(letter => string.toUpperCase().includes(letter));
 }

@@ -10,9 +10,9 @@
 // Solution:
 function solution(string) {
   return string
-    .split("")
-    .map((item) => (/[A-Z]/g.test(item) ? ` ${item}` : item))
-    .join("");
+    .split('')
+    .map(item => (/[A-Z]/g.test(item) ? ` ${item}` : item))
+    .join('');
 }
 // Other solution:
-const simpleSolution = (string) => string.replace(/([A-Z])/g, " $&");
+const simpleSolution = string => string.replace(/([A-Z])/g, ' $&');

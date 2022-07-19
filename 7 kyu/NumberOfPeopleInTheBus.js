@@ -10,7 +10,7 @@
   Please keep in mind that the test cases ensure that the number of people in the bus is always >= 0. So the return integer can't be negative.
   The second value in the first integer array is 0, since the bus is empty in the first bus stop. */
 
-// Example: 
+// Example:
 // numbers([[10,0],[3,5],[5,8]]) // should return 5.
 // numbers([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]) // should return 17.
 // numbers([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]) // should return 21.

@@ -26,11 +26,12 @@ const DataBase = {
   polish: 'Witamy',
   spanish: 'Bienvenido',
   swedish: 'Valkommen',
-  welsh: 'Croeso'
-}
+  welsh: 'Croeso',
+};
 
 // Solution:
-const greet = language => !DataBase[language] ? 'Welcome' : DataBase[language];
+const greet = language =>
+  !DataBase[language] ? 'Welcome' : DataBase[language];
 
 // Other Solution:
 function greet(language) {

@@ -10,13 +10,13 @@
 
 // Solution:
 function domainName(url) {
-  if (url.includes("http") || url.includes(".")) {
-    if (url.includes("www")) {
-      return url.split(".")[1];
-    } else if (!url.includes("http")) {
-      return url.split(".")[0];
+  if (url.includes('http') || url.includes('.')) {
+    if (url.includes('www')) {
+      return url.split('.')[1];
+    } else if (!url.includes('http')) {
+      return url.split('.')[0];
     } else {
-      return url.split(".")[0].split("//")[1];
+      return url.split('.')[0].split('//')[1];
     }
   }
 }
@@ -24,8 +24,8 @@ function domainName(url) {
 // Other Solutions:
 function domainName(url) {
   return url
-    .replace("http://", "")
-    .replace("https://", "")
-    .replace("www.", "")
-    .split(".")[0];
+    .replace('http://', '')
+    .replace('https://', '')
+    .replace('www.', '')
+    .split('.')[0];
 }

@@ -15,13 +15,13 @@ function encrypt(text, number) {
     return text;
   }
 
-  let oddIndex = "";
-  let evenIndex = "";
+  let oddIndex = '';
+  let evenIndex = '';
   let encryptedText = text;
 
   do {
-    oddIndex = "";
-    evenIndex = "";
+    oddIndex = '';
+    evenIndex = '';
 
     for (let i = 0; i < encryptedText.length; i++) {
       if (i % 2 === 0) {
@@ -45,10 +45,10 @@ function decrypt(encryptedText, number) {
 
   let decryptedText = encryptedText;
   let halfEncrypted = 0;
-  let decrypt = "";
+  let decrypt = '';
 
   do {
-    decrypt = "";
+    decrypt = '';
 
     if (decryptedText.length % 2 === 0) {
       halfEncrypted = decryptedText.length / 2;

@@ -14,10 +14,9 @@ The numbers will also all be unique and in ascending order. The numbers could be
 
 // Solution:
 function firstNonConsecutive(arr) {
-
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] + 1 != arr[i + 1] && (i + 1) != arr.length) {
-      return arr[i + 1]
+    if (arr[i] + 1 != arr[i + 1] && i + 1 != arr.length) {
+      return arr[i + 1];
     }
   }
 
