@@ -1,0 +1,34 @@
+// [7 kyu] Sort array by string length
+
+// Description:
+// Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
+
+// For example, if this array were passed as an argument:
+
+// ["Telescopes", "Glasses", "Eyes", "Monocles"]
+// Your function would return the following array:
+// ["Eyes", "Glasses", "Monocles", "Telescopes"]
+
+// All of the strings in the array passed to your function will be different lengths, so you will not have to decide how to order multiple strings of the same length.
+
+
+// Solution:
+function sortByLength(array) {
+  return array.sort((a, b) => a.length - b.length);
+}
+
+// Other solution:
+function sortByLength(array) {
+  let sortedArray = [];
+  let arraySortBylength = [...array].map(item => item.length).sort((a, b) => a - b);
+
+  for (let index of arraySortBylength) {
+    for (let j = 0; j < array.length; j++) {
+      if (array[j].length === index) {
+        sortedArray.push(array[j]);
+      }
+    }
+  }
+
+  return sortedArray;
+}
