@@ -8,16 +8,16 @@
 // orderedCount("abracadabra") == [['a', 5], ['b', 2], ['r', 2], ['c', 1], ['d', 1]]
 
 // Solution:
-const orderedCount = function (text) {
-  const repeat = {};
+const orderedCount = text => {
+  const letterRepeat = {};
   const arrayText = text.split('');
 
-  arrayText.forEach(el => {
-    repeat[el] = repeat[el] ? repeat[el] : 0;
-    repeat[el] += 1;
-  });
+  for (const el of arrayText) {
+    letterRepeat[el] = letterRepeat[el] ? letterRepeat[el] : 0;
+    letterRepeat[el] += 1;
+  }
 
-  return Array.from(new Set(arrayText)).map(element => [element, repeat[element]]);
+  return Object.entries(letterRepeat);
 };
 
 // Other solution:
